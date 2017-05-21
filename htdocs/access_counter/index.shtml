@@ -7,5 +7,9 @@
     <h2>Perl</h2>
     <pre><!--#exec cmd="perl ./perl/counter.pl" --></pre>
     <p>あなたは<!--#include file="./perl/counter.txt" -->人目のお客さんです</p>
+    <h2>Ruby</h2>
+    <pre><!--#exec cmd="ruby ./ruby/counter.rb" --></pre>
+    <p>あなたは<!--#include file="./ruby/count.txt" -->人目のお客さんです</p>
+
   </body>
 </html>
