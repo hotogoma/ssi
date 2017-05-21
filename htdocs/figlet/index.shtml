@@ -35,7 +35,16 @@
         <option value="smshadow" <!--#if expr="$font = 'smshadow'" -->selected<!--#endif -->>smshadow</option>
         <option value="smslant" <!--#if expr="$font = 'smslant'" -->selected<!--#endif -->>smslant</option>
       </select>
+
+      <!--#set var="kerning" value="" -->
+      <!--#if expr="$QUERY_STRING = /kerning=1/" -->
+      <!--#set var="kerning" value="-k" -->
+      <!--#endif -->
+      <label>
+        <input type="checkbox" name="kerning" value="1" <!--#if expr="$kerning != ''" -->checked<!--#endif --> />
+        kerning
+      </label>
     </form>
-    <pre><!--#exec cmd="figlet $str -f $font" --></pre>
+    <pre><!--#exec cmd="figlet $str -f $font $kerning" --></pre>
   </body>
 </html>
