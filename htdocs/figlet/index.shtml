@@ -4,6 +4,12 @@
     <meta charset="utf8">
   </head>
   <body>
-    <pre><!--#exec cmd="figlet foo" --></pre>
+    <form action="." method="get">
+      <input type="text" name="str" />
+    </form>
+    <!--#if expr="$QUERY_STRING = /str=([a-zA-Z0-9_-]+)/" -->
+    <!--#set var="str" value="$1" -->
+    <pre><!--#exec cmd="figlet $1" --></pre>
+    <!--#endif -->
   </body>
 </html>
