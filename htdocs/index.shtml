@@ -5,5 +5,9 @@
   </head>
   <body>
     <pre style="font-family: monaco"><!--#exec cmd="apt moo" --></pre>
+    <ul>
+      <li><a href="/access_counter">access_counter</li>
+      <li><a href="/figlet">figlet</li>
+    </ul>
   </body>
 </html>
