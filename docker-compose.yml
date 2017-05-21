@@ -1,5 +1,5 @@
-httpd:
-  image: httpd:2.2
+web:
+  build: .
   volumes:
     - ./httpd.conf:/usr/local/apache2/conf/httpd.conf
     - ./htdocs:/htdocs
