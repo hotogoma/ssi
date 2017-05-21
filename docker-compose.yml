@@ -1,0 +1,6 @@
+httpd:
+  image: httpd:2.2
+  volumes:
+    - ./httpd.conf:/usr/local/apache2/conf/httpd.conf
+  ports:
+    - 8080:80
