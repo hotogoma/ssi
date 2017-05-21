@@ -4,6 +4,6 @@
     <meta charset="utf8">
   </head>
   <body>
-    <pre><!--#exec cmd="apt moo" --></pre>
+    <pre style="font-family: monaco"><!--#exec cmd="apt moo" --></pre>
   </body>
 </html>
