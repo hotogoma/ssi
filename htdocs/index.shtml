@@ -3,5 +3,6 @@
     <h1>
       <!--#include file="./includes/hello.txt" -->
     </h1>
+    <!--#exec cmd="ls" -->
   </body>
 </html>
