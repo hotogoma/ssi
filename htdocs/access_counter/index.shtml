@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf8">
+  </head>
+  <body>
+    <h2>Perl</h2>
+    <pre><!--#exec cmd="perl ./perl/counter.pl" --></pre>
+    <p>あなたは<!--#include file="./perl/counter.txt" -->人目のお客さんです</p>
+  </body>
+</html>
