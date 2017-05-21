@@ -2,4 +2,6 @@ pre {
   font-family: monaco;
   color: #fff;
   background-color: #333;
+  line-height: 1.3em;
+  padding: .5em 1em;
 }
