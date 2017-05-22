@@ -32,21 +32,7 @@
               <select class="ui fluid dropdown" name="font">
                 <option value="standard">standard (default)</option>
                 <option disabled>----------------</option>
-                <option value="banner" <!--#if expr="$font = 'banner'" -->selected<!--#endif -->>banner</option>
-                <option value="big" <!--#if expr="$font = 'big'" -->selected<!--#endif -->>big</option>
-                <option value="block" <!--#if expr="$font = 'block'" -->selected<!--#endif -->>block</option>
-                <option value="bubble" <!--#if expr="$font = 'bubble'" -->selected<!--#endif -->>bubble</option>
-                <option value="digital" <!--#if expr="$font = 'digital'" -->selected<!--#endif -->>digital</option>
-                <option value="ivrit" <!--#if expr="$font = 'ivrit'" -->selected<!--#endif -->>ivrit</option>
-                <option value="lean" <!--#if expr="$font = 'lean'" -->selected<!--#endif -->>lean</option>
-                <option value="mini" <!--#if expr="$font = 'mini'" -->selected<!--#endif -->>mini</option>
-                <option value="script" <!--#if expr="$font = 'script'" -->selected<!--#endif -->>script</option>
-                <option value="shadow" <!--#if expr="$font = 'shadow'" -->selected<!--#endif -->>shadow</option>
-                <option value="slant" <!--#if expr="$font = 'slant'" -->selected<!--#endif -->>slant</option>
-                <option value="small" <!--#if expr="$font = 'small'" -->selected<!--#endif -->>small</option>
-                <option value="smscript" <!--#if expr="$font = 'smscript'" -->selected<!--#endif -->>smscript</option>
-                <option value="smshadow" <!--#if expr="$font = 'smshadow'" -->selected<!--#endif -->>smshadow</option>
-                <option value="smslant" <!--#if expr="$font = 'smslant'" -->selected<!--#endif -->>smslant</option>
+<!--#exec cmd='showfigfonts | grep " :\$" | awk \'{ print \$1 }\' | grep -v "standard" | perl -nle \'my \$s = "$font" eq \$_ ? " selected" : ""; print "<option value=\"$_\"\$s>\$_</option>"\''-->
               </select>
             </div>
             <div class="two wide field">
