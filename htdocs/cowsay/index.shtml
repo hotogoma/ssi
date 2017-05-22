@@ -22,7 +22,9 @@
               <!--#set var="pic" value="$1" -->
               <!--#endif -->
               <select class="ui fluid dropdown" name="pic">
-<!--#exec cmd='/usr/games/cowthink -l | tail -n +2 | sed -e "s/ /\\n/g" | perl -nle \'my \$s = "$pic" eq \$_ ? " selected" : ""; print "<option value=\"$_\"\$s>\$_</option>"\''-->
+                <option value="default">default</option>
+                <option disabled>----------------</option>
+<!--#exec cmd='/usr/games/cowthink -l | tail -n +2 | sed -e "s/ /\\n/g" | grep -v "default" | perl -nle \'my \$s = "$pic" eq \$_ ? " selected" : ""; print "<option value=\"$_\"\$s>\$_</option>"\''-->
               </select>
             </div>
             <div class="two wide field">
