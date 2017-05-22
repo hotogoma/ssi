@@ -7,7 +7,7 @@
     <pre style="font-family: monaco"><!--#exec cmd="apt moo" --></pre>
     <ul>
       <li><a href="/access_counter">access_counter</li>
-      <li><a href="/cowsay">CowSay</li>
+      <li><a href="/cowsay">CowSay Fortune</li>
       <li><a href="/figlet">FIGlet</li>
     </ul>
   </body>
