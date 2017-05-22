@@ -40,6 +40,7 @@
         </form>
         <pre><!--#exec cmd="/usr/games/fortune | /usr/games/$cmd -f $pic" --></pre>
       </div>
+      <a href="/">&lt;&lt; Back</a>
     </main>
   </body>
 </html>

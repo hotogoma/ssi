@@ -64,6 +64,7 @@
         </form>
         <pre><!--#exec cmd="figlet -f $font $kerning $text" --></pre>
       </div>
+      <a href="/">&lt;&lt; Back</a>
     </main>
   </body>
 </html>
