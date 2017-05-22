@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf8">
+    <title>CowSay</title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main id="main" class="ui container">
+      <div class="ui piled segment">
+        <h1>CowSay</h1>
+        <form class="ui form" action="." method="get">
+          <div class="fields">
+            <div class="ten wide field">
+              <label>Text</label>
+              <!--#set var="text" value="moo" -->
+              <!--#if expr="$QUERY_STRING = /text=([a-zA-Z0-9._+-]+)/" -->
+              <!--#set var="text" value="$1" -->
+              <!--#endif -->
+              <input type="text" name="text" value="<!--#echo var="text" -->" />
+            </div>
+            <div class="four wide field">
+              <label>Font</label>
+              <!--#set var="type" value="default" -->
+              <!--#if expr="$QUERY_STRING = /type=([a-z-.]+)/" -->
+              <!--#set var="type" value="$1" -->
+              <!--#endif -->
+              <select class="ui fluid dropdown" name="type">
+<!--#exec cmd='/usr/games/cowthink -l | tail -n +2 | sed -e "s/ /\\n/g" | perl -nle \'my $s = "$type" eq \$_ ? " selected" : ""; print "<option value=\"$_\"\$s>\$_</option>"\''-->
+              </select>
+            </div>
+            <div class="two wide field">
+              <label>Think</label>
+              <!--#set var="cmd" value="cowsay" -->
+              <!--#if expr="$QUERY_STRING = /think=1/" -->
+              <!--#set var="cmd" value="cowthink" -->
+              <!--#endif -->
+              <div class="ui toggle checkbox">
+                <label></label>
+                <input id="think" type="checkbox" name="think" value="1" <!--#if expr="$cmd != 'cowsay'" -->checked<!--#endif --> />
+              </div>
+            </div>
+          </div>
+        </form>
+        <pre><!--#exec cmd="/usr/games/$cmd -f $type $text" --></pre>
+      </div>
+    </main>
+  </body>
+</html>
