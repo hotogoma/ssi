@@ -1,19 +1,14 @@
 # SSI
 スーパー すごい いい感じ
 
-## Build and Run Container
+## Build
 ```
-$ docker-compose up
+$ docker build . -t ssi
+```
+
+## Run
+```
+$ docker run --rm -p 8080:80 ssi_web
 ```
 
 Then try to access http://localhost:8080
-
-## Rebuild Container
-```
-$ docker-compose build
-```
-
-## Login to Container
-```
-$ docker-compose run --rm web bash
-```

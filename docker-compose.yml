@@ -1,7 +1,0 @@
-web:
-  build: .
-  volumes:
-    - ./httpd.conf:/usr/local/apache2/conf/httpd.conf
-    - ./htdocs:/htdocs
-  ports:
-    - 8080:80
