@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>include text</title>
+  </head>
+  <body>
+    <h2>include file_1.txt</h2>
+    <!--#include file="./file_1.txt" -->
+    <h2>include file_2.txt</h2>
+    <!--#include file="./file_2.txt" -->
+
+    <p>
+      <a href="/">&lt;&lt; Back</a>
+    </p>
+  </body>
+</html>
+
